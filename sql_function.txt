@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `new_function`() RETURNS int
+BEGIN
+	declare returnval INTEGER;
+	select count(id) INTO returnval from test_table;
+RETURN returnval;
+END$$
+DELIMITER ;
