@@ -29,5 +29,14 @@ public class DBFunctionCallController {
 		return new ResponseEntity<Integer>(retrunVal, HttpStatus.OK);
 		
 	}
+	
+	@GetMapping("callProcedure")
+	public ResponseEntity<String> callDBProcedure() {
+		String retrunVal = dbFunServ.callDBProcedure();
+		return new ResponseEntity<String>(retrunVal, HttpStatus.OK);
+		
+	}
+	
+	
 
 }

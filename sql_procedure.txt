@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `new_procedure`(INOUT returnval VARCHAR(500))
+BEGIN
+	select count(id) INTO returnval from test_table;
+    SET returnval = 'count is greater than 0';
+END
